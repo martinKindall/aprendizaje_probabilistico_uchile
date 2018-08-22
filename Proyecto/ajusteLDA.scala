@@ -12,7 +12,7 @@ import edu.stanford.nlp.tmt.stage._;
 import edu.stanford.nlp.tmt.model.lda._;
 import edu.stanford.nlp.tmt.model.llda._;
 
-val source = CSVFile("data_limpia.csv") ~> Drop(1);
+val source = CSVFile("data_limpia_train.csv") ~> Drop(1);
 
 val tokenizer = {
   WhitespaceTokenizer() ~>            

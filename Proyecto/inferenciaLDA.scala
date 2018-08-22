@@ -23,7 +23,7 @@ val model = lldaModel.asCVB0LDA;
 
 // A new dataset for inference.  (Here we use the same dataset
 // that we trained against, but this file could be something new.)
-val source = CSVFile("data_limpia_unlabeled.csv");
+val source = CSVFile("data_limpia_test.csv") ~> Drop(1);
 
 val text = {
   source ~>                              // read from the source file
